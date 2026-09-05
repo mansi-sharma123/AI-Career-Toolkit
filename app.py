@@ -22,21 +22,20 @@ if api_key:
             prompt = f"Analyze this resume for {role} role. Give score out of 100, strengths, gaps, and suggestions: {text[:4000]}"
 
             with st.spinner("Analyzing..."):
-                models_to_try = ["gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-1.5-flash", "gemini-flash-latest"]
+                models_to_try = ["gemini-1.5-flash", "gemini-2.0-flash", "gemini-flash-latest"]
                 resp = None
                 for m in models_to_try:
                     try:
                         resp = client.models.generate_content(model=m, contents=prompt)
                         break
-                    except Exception as e:
+                    except:
                         time.sleep(1)
                         continue
-
                 if resp:
                     st.success("Analysis Complete!")
                     st.write(resp.text)
                 else:
-                    st.error("Google server busy hai (503). 30 sec baad retry karo.")
+                    st.error("Server busy (503) - 30 sec baad retry karo")
         else:
             st.warning("Please upload resume and enter role")
 else:
