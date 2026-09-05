@@ -14,29 +14,27 @@ if api_key:
     client = genai.Client(api_key=api_key)
     uploaded = st.file_uploader("Upload Resume PDF", type="pdf")
     role = st.text_input("Dream Role", placeholder="e.g. SDE, Data Analyst")
-
+    
     if st.button("Analyze"):
         if uploaded and role:
             reader = PyPDF2.PdfReader(uploaded)
             text = "".join([p.extract_text() or "" for p in reader.pages])
-            prompt = f"Analyze this resume for {role} role. Give score out of 100, strengths, gaps, and suggestions: {text[:4000]}"
-
+            prompt = f"Analyze resume for {role} role. Give score out of 100, strengths, gaps, suggestions: {text[:4000]}"
+            
             with st.spinner("Analyzing..."):
-                models_to_try = ["gemini-1.5-flash", "gemini-2.0-flash", "gemini-flash-latest"]
-                resp = None
-                for m in models_to_try:
+                models = ["gemini-1.5-flash", "gemini-2.0-flash", "gemini-flash-latest"]
+                for m in models:
                     try:
                         resp = client.models.generate_content(model=m, contents=prompt)
+                        st.success("Analysis Complete!")
+                        st.write(resp.text)
                         break
                     except:
                         time.sleep(1)
                         continue
-                if resp:
-                    st.success("Analysis Complete!")
-                    st.write(resp.text)
                 else:
-                    st.error("Server busy (503) - 30 sec baad retry karo")
+                    st.error("Server busy - 30 sec baad retry karo")
         else:
-            st.warning("Please upload resume and enter role")
+            st.warning("Resume aur Role dono dalo")
 else:
-    st.warning("Sidebar me API Key dalo - tab tool dikhega")
+    st.warning("Sidebar me API Key dalo")
