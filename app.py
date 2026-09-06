@@ -37,4 +37,4 @@ if api_key:
         else:
             st.warning("Resume aur Role dono dalo")
 else:
-    st.warning("Sidebar me API Key dalo")
+    st.warning("API Key")
