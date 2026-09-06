@@ -1,7 +1,18 @@
-# GenAI & LLM App Development Series – 150 Real AI Tools
+# AI-Career-Toolkit 🚀
 
-Welcome to the GenAI & LLM App Development Series – 150 Real AI Tools built with OpenAI, Gemini, and other LLMs.
+Your all-in-one AI toolkit for career growth - Resume Analysis, YouTube Summarization & more.
 
-YouTube Playlist - https://www.youtube.com/playlist?list=PL...
+## ✨ Features
+- **AI Resume Analyzer** - Get instant feedback on your resume with ATS score
+- **AI YouTube Video Summarizer** - Summarize any YouTube video in seconds
+- Built with OpenAI, Streamlit & Python
 
-By Mansi Sharma | @mansi-sharma123
+## 🛠️ Tech Stack
+Python, Streamlit, OpenAI API, LangChain
+
+## 📦 Installation
+```bash
+git clone https://github.com/mansi-sharma123/AI-Career-Toolkit.git
+cd AI-Career-Toolkit
+pip install -r requirements.txt
+streamlit run app.py
