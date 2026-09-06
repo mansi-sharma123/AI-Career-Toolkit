@@ -5,7 +5,7 @@ Welcome to the GenAI &amp; LLM App Development Series – 150 Real AI Tools for 
 https://www.youtube.com/playlist?list=PLp4WMXO7ORJE57QOVsybKKiqDGI739EvB
 =======
 # 🚀 AI-Career-Toolkit
-### By Mansi Sharma | LLM Apps - College Project
+# By Mansi Sharma | @mansi-sharma123
 
 > LLM Powered Tools for Career Growth - Resume Analysis, Gap Detection & Career Guidance
 
