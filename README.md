@@ -28,9 +28,9 @@
 > This toolkit analyzes your resume like a real ATS and summarizes any YouTube video in 10 seconds using Generative AI.
 
 ### 🎯 Problem It Solves
-- ❌ Resume ATS me fail ho jata hai, shortlist nahi hota
-- ❌ 2-hour ki YouTube video se notes banana boring hai
-- ✅ Solution: AI se instant ATS Score + Video Summary
+- ❌ Resume fails in ATS , not get shortliste
+
+- ✅ Solution: AI se instant ATS Score 
 
 ---
 
